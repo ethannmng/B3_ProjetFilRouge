@@ -1,28 +1,28 @@
-<header class="site-header">
+<header class="site-header" role="banner">
     <div class="container">
         <div class="header-content">
             <div class="d-flex align-items-center">
-                <img src="assets/img/LOGO_ARCHITEQUEPC.png" alt="Logo" class="header-logo">
-                <a class="navbar-brand" href="index.html">Architecte PC</a>
+                <img src="assets/img/LOGO_ARCHITEQUEPC.png" alt="Logo Architecte PC" class="header-logo">
+                <a class="navbar-brand" href="index.html" aria-label="Retour à l'accueil">Architecte PC</a>
             </div>
-            <nav class="header-nav d-none d-lg-flex">
-                <a href="index.html" class="nav-link">Accueil</a>
+            <nav class="header-nav d-none d-lg-flex" aria-label="Navigation principale">
+                <a href="index.html" class="nav-link" aria-current="page">Accueil</a>
                 <a href="catalogue.html" class="nav-link">Catalogue</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-                <button class="btn btn-configurator" id="openConfiguratorModal">Configurateur</button>
+                <button class="btn btn-configurator open-configurator-modal" id="openConfiguratorModal" aria-label="Ouvrir le configurateur de PC">Configurateur</button>
             </nav>
-            <button class="mobile-menu-btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="mobile-menu-btn d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false" aria-label="Ouvrir le menu de navigation">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </button>
         </div>
         <div class="collapse mobile-menu" id="mobileMenu">
-            <nav class="mobile-nav">
-                <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <nav class="mobile-nav" aria-label="Navigation mobile">
+                <a href="index.html" class="mobile-nav-link" aria-current="page">Accueil</a>
                 <a href="catalogue.html" class="mobile-nav-link">Catalogue</a>
                 <a href="contact.html" class="mobile-nav-link">Contact</a>
-                <button class="btn btn-configurator w-100 mt-2" id="openConfiguratorModalMobile">Configurateur</button>
+                <button class="btn btn-configurator open-configurator-modal w-100 mt-2" id="openConfiguratorModalMobile" aria-label="Ouvrir le configurateur de PC">Configurateur</button>
             </nav>
         </div>
     </div>

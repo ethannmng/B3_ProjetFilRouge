@@ -1615,3 +1615,128 @@ a {
 .mt-4 {
     margin-top: 1.5rem !important;
 }
+
+/* ===================================
+   ACCESSIBILITÉ
+   =================================== */
+
+/* Classe pour masquer visuellement mais garder accessible aux lecteurs d'écran */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Focus visible pour la navigation au clavier */
+*:focus-visible {
+    outline: 3px solid #4a9eff;
+    outline-offset: 2px;
+}
+
+/* Focus sur les boutons */
+.btn:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid #4a9eff;
+    outline-offset: 2px;
+}
+
+/* Focus sur les liens de navigation */
+.nav-link:focus-visible,
+.mobile-nav-link:focus-visible,
+.footer-link:focus-visible {
+    outline: 3px solid #4a9eff;
+    outline-offset: 2px;
+    text-decoration: underline;
+}
+
+/* Amélioration du contraste pour les textes secondaires */
+.feature-text,
+.info-text {
+    color: #4a5568;
+    font-size: 0.95rem;
+}
+
+/* Skip link pour navigation clavier */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #4a9eff;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+    z-index: 10000;
+    font-weight: 600;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* Amélioration du focus pour les modals */
+.modal-overlay:focus-within .modal-container {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 0 4px #4a9eff;
+}
+
+/* Meilleur contraste pour les icônes */
+.info-icon i {
+    opacity: 0.8;
+}
+
+/* Assurer que les éléments interactifs ont une taille minimale de 44x44px */
+.btn,
+button,
+a.btn {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-close {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Mode de mouvement réduit pour les utilisateurs sensibles aux animations */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .marquee-content {
+        animation: none !important;
+    }
+    
+    .modal-icon-warning svg {
+        animation: none !important;
+    }
+}
+
+/* Mode sombre pour les préférences système */
+@media (prefers-color-scheme: dark) {
+    /* À implémenter si nécessaire */
+}
+
+/* Amélioration des messages d'erreur de formulaire */
+.form-control:invalid:focus {
+    border-color: #dc2626;
+    box-shadow: 0 0 0 0.25rem rgba(220, 38, 38, 0.25);
+}
+
+.form-control:valid:focus {
+    border-color: #10b981;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+}

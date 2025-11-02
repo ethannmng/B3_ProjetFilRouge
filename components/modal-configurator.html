@@ -1,8 +1,8 @@
 <!-- Modal Configurateur -->
-<div class="modal-overlay" id="configuratorModal">
+<div class="modal-overlay" id="configuratorModal" role="dialog" aria-modal="true" aria-labelledby="configuratorModalTitle" aria-describedby="configuratorModalDesc">
     <div class="modal-container">
-        <button class="modal-close" id="closeModal">&times;</button>
-        <div class="modal-icon">
+        <button class="modal-close" id="closeModal" aria-label="Fermer le modal">&times;</button>
+        <div class="modal-icon" aria-hidden="true">
             <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="32" cy="32" r="32" fill="#E8F4FF"/>
                 <path d="M32 20L38 26L32 32L26 26L32 20Z" fill="#4a9eff"/>
@@ -11,12 +11,12 @@
                 <path d="M32 44L26 38L32 32L38 38L32 44Z" fill="#4a9eff"/>
             </svg>
         </div>
-        <h2 class="modal-title">Configurateur bientôt disponible</h2>
-        <p class="modal-text">Notre configurateur est actuellement en développement. Il ouvrira très bientôt pour vous permettre de composer votre PC sur mesure !</p>
+        <h2 id="configuratorModalTitle" class="modal-title">Configurateur bientôt disponible</h2>
+        <p id="configuratorModalDesc" class="modal-text">Notre configurateur est actuellement en développement. Il ouvrira très bientôt pour vous permettre de composer votre PC sur mesure !</p>
         <p class="modal-subtext">En attendant, découvrez nos composants disponibles dans le catalogue.</p>
-        <div class="modal-actions">
-            <a href="catalogue.html" class="modal-btn-primary">Voir le catalogue</a>
-            <button class="modal-btn-secondary" id="closeModalBtn">Fermer</button>
+        <div class="modal-actions" role="group" aria-label="Actions disponibles">
+            <a href="catalogue.html" class="modal-btn-primary" aria-label="Aller à la page catalogue">Voir le catalogue</a>
+            <button class="modal-btn-secondary" id="closeModalBtn" aria-label="Fermer ce modal">Fermer</button>
         </div>
     </div>
 </div>

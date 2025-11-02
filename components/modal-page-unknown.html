@@ -1,25 +1,25 @@
-<div class="modal-overlay" id="pageUnknownModal">
+<div class="modal-overlay" id="pageUnknownModal" role="dialog" aria-modal="true" aria-labelledby="pageUnknownModalTitle" aria-describedby="pageUnknownModalDesc">
     <div class="modal-container">
-        <button class="modal-close" id="closePageUnknownModal" aria-label="Fermer">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <button class="modal-close" id="closePageUnknownModal" aria-label="Fermer le modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
             </svg>
         </button>
         
-        <div class="modal-icon modal-icon-warning">
+        <div class="modal-icon modal-icon-warning" aria-hidden="true">
             <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="24" cy="24" r="20" stroke="currentColor" stroke-width="2.5"/>
                 <path d="M24 14V26M24 32V32.02" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
             </svg>
         </div>
         
-        <h2 class="modal-title">Page non disponible</h2>
+        <h2 id="pageUnknownModalTitle" class="modal-title">Page non disponible</h2>
         
-        <p class="modal-description">Cette page n'est pas encore disponible. Nous travaillons activement sur son développement pour vous apporter le meilleur service possible.</p>
+        <p id="pageUnknownModalDesc" class="modal-description">Cette page n'est pas encore disponible. Nous travaillons activement sur son développement pour vous apporter le meilleur service possible.</p>
         
-        <div class="modal-actions">
-            <button class="modal-btn modal-btn-secondary" id="closePageUnknownModalBtn">Fermer</button>
-            <a href="contact.html" class="modal-btn modal-btn-primary">Nous contacter</a>
+        <div class="modal-actions" role="group" aria-label="Actions disponibles">
+            <button class="modal-btn modal-btn-secondary" id="closePageUnknownModalBtn" aria-label="Fermer ce modal">Fermer</button>
+            <a href="contact.html" class="modal-btn modal-btn-primary" aria-label="Aller à la page de contact">Nous contacter</a>
         </div>
     </div>
 </div>
